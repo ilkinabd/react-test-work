@@ -3,6 +3,7 @@ import React from 'react';
 export default function LinkItem(props) {
     return (
         <div className={`list-item`}>
+            <button className={`delete`} onClick={() => props.onDeleteClick(props.id)}>x</button>
             <div className={`point`}>
                 <span>{props.points}</span>
                 <span>points</span>

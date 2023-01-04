@@ -1,6 +1,9 @@
 body{
     margin: 0;
 }
+p{
+    margin-top: 0;
+}
 label{
     display: block;
 }
@@ -20,7 +23,24 @@ input {
 
 .list-item{
     display: flex;
+    padding: 8px;
     margin-bottom: 16px;
+    position: relative;
+}
+.list-item .delete {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+.list-item:hover{
+    background: #e3dfdf;
+}
+
+.list-item:hover .delete{
+    display: block;
 }
 
 .list-item .point{
@@ -69,4 +89,37 @@ input {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.modal{
+    min-width: 300px;
+    position: relative;
+}
+
+.modal-title{
+    background: black;
+    margin-top: 0;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
+}
+
+.modal-close{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.modal-content{
+    padding: 8px;
+}
+
+.modal-buttons{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-buttons button {
+    cursor: pointer;
 }
